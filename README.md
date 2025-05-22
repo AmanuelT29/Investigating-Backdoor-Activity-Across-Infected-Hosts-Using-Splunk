@@ -5,3 +5,9 @@ SOC Analyst has observed some anomalous behaviours in the logs of a few windows 
 
 ## Objective
 In this investigation, I aim to identify and confirm potential indicators of compromise across suspected infected hosts. To do this, I will raise and methodically answer a series of key questions that guide each step of the process. This approach will help uncover any malicious activity, such as unauthorized account creation, suspicious command executions, or registry changes. The goal is to demonstrate how a structured analysis using tools like Splunk can be used to detect and respond to backdoor activity within a compromised environment.
+
+---
+### Question 1: Do the logs show that a new username was created?
+
+
+### Question 2: Do the logs shows an updated key registry? If so, what is the full of that registry key? 
