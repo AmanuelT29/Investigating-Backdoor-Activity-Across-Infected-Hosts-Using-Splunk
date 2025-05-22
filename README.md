@@ -21,3 +21,19 @@ Just as we identified the event logged when a new user was created, we can also 
 ![Screenshot 2025-05-22 025442](https://github.com/user-attachments/assets/d1a77b6f-8635-4b9a-ab9b-3961d0c4a700)
 
 As shown in the screenshot, only one event was returned, and it contains the registry path we're looking for, along with the suspicious username: **HKLM\SAM\SAM\Domains\Account\Users\Names\A1berto**.
+
+### Question 3: According to the logs, is there a legitimate user the adversary was trying to impersonate?
+To find the answer, I went to the **Selected Fields** pane and selected **User** to view all the users listed in the system.
+![Screenshot 2025-05-22 155208](https://github.com/user-attachments/assets/fcdc3f77-51bf-49b4-8a62-b6f5c48e09fe)
+
+As shown in the screenshot, there were four users listed in the logs. One user stood out: **Cybertees\Alberto**. This suggests that the adversary, using the username "A1berto", was attempting to impersonate the legitimate user **Alberto**.
+
+### Question 4: What command is used to add a backdoor user from a remote computer?
+
+![Screenshot 2025-05-22 165538](https://github.com/user-attachments/assets/a55fa89d-6187-49b8-8a01-d93c5bf6ecd9)
+
+### Question 5: How many login attempts by the backdoor user were detected during the investigation?
+
+### Question 6: What is the name of the infected host where suspicious PowerShell commands were executed?
+
+### Question 7: Is PowerShell logging enabled on this device? If so, how many events were recorded related to the malicious PowerShell execution?
