@@ -1,4 +1,4 @@
-# Investigating-Backdoor-Activity-Infected-Hosts-Using-Splunk
+# Investigating Backdoor Activity Across Infected Hosts Using Splunk
 
 ## Scenario Details
 SOC Analyst has observed some anomalous behaviours in the logs of a few windows machines. It looks like the adversary has access to some of these machines and successfully created some backdoor. My task as SOC Analyst is to examine the logs and identify the anomalies. All relevant logs are in the **index "main"**.
