@@ -13,7 +13,7 @@ To find the answer, I first checked the "Interesting Fields" pane, where I notic
 ![Screenshot 2025-05-22 013046](https://github.com/user-attachments/assets/6db7cba7-2df6-4f6f-99b3-a3890e037118)![Screenshot 2025-05-22 013239](https://github.com/user-attachments/assets/ddad888c-82f3-4a23-a76d-1dded90ff70d)
 
 As shown in the screenshot, only one event was returned, indicating that the account named **James** created the backdoor. It also reveals the name of the new account created: **A1berto**. It's important to note the spelling—the letter "L" is replaced with the number "1", likely as an attempt to mimic the name of a legitimate user and avoid detection.
-
+___
 #### Question 2: Is there an updated registry key? If so, what is the full path of that registry key? 
 Just as we identified the event logged when a new user was created, we can also search for events related to registry updates. The relevant **Event ID** for this is **13**. To investigate further, I included the suspicious username in the search and ran the following query: **index="main" EventID="13" a1berto**
 
@@ -21,19 +21,19 @@ Just as we identified the event logged when a new user was created, we can also 
 ![Screenshot 2025-05-22 025442](https://github.com/user-attachments/assets/d1a77b6f-8635-4b9a-ab9b-3961d0c4a700)
 
 As shown in the screenshot, only one event was returned, and it contains the registry path we're looking for, along with the suspicious username: **HKLM\SAM\SAM\Domains\Account\Users\Names\A1berto**.
-
+___
 ### Question 3: According to the logs, is there a legitimate user the adversary was trying to impersonate?
 To find the answer, I went to the **Selected Fields** pane and selected **User** to view all the users listed in the system.
 ![Screenshot 2025-05-22 155208](https://github.com/user-attachments/assets/fcdc3f77-51bf-49b4-8a62-b6f5c48e09fe)
 
 As shown in the screenshot, there were four users listed in the logs. One user stood out: **Cybertees\Alberto**. This suggests that the adversary, using the username "A1berto", was attempting to impersonate the legitimate user **Alberto**.
-
+___
 ### Question 4: What command is used to add a backdoor user from a remote computer?
 As with the previous step, I navigated to the **Selected Fields** pane and selected **CommandLine** to review all logged commands. My goal was to identify any command containing the suspicious username.
 ![Screenshot 2025-05-22 165538](https://github.com/user-attachments/assets/a55fa89d-6187-49b8-8a01-d93c5bf6ecd9)
 As shown in the screenshot, there was one command containing the suspicious username: **"C:\Windows\System32\Wbem\WMIC.exe" /node:WORKSTATION6 process call create "net user /add A1berto paw0rd1"** This is most likely the command used to add the backdoor user.
-
+___
 ### Question 5: What is the name of the infected host where suspicious PowerShell commands were executed?
 The infected host can be identified using the information from the previous screenshot, which shows the **Hostname:James.browne**.
-
+___
 ### Question 6: Is PowerShell logging enabled on this device? If so, how many events were recorded related to the malicious PowerShell execution?
