@@ -31,7 +31,6 @@ As shown in the screenshot, there were four users listed in the logs. One user s
 ### Question 4: What command is used to add a backdoor user from a remote computer?
 As with the previous step, I navigated to the **Selected Fields** pane and selected **CommandLine** to review all logged commands. My goal was to identify any command containing the suspicious username.
 ![Screenshot 2025-05-22 165538](https://github.com/user-attachments/assets/a55fa89d-6187-49b8-8a01-d93c5bf6ecd9)
-
 As shown in the screenshot, there was one command containing the suspicious username: **"C:\Windows\System32\Wbem\WMIC.exe" /node:WORKSTATION6 process call create "net user /add A1berto paw0rd1"** This is most likely the command used to add the backdoor user.
 
 ### Question 6: What is the name of the infected host where suspicious PowerShell commands were executed?
