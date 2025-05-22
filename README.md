@@ -17,6 +17,7 @@ As shown in the screenshot, only one event was returned, indicating that the acc
 #### Question 2: Is there an updated registry key? If so, what is the full path of that registry key? 
 Just as we identified the event logged when a new user was created, we can also search for events related to registry updates. The relevant **Event ID** for this is **13**. To investigate further, I included the suspicious username in the search and ran the following query: **index="main" EventID="13" a1berto**
 
-![Screenshot 2025-05-22 025356](https://github.com/user-attachments/assets/b85145f3-98f4-4bd6-8600-887d2912522f)![Screenshot 2025-05-22 025442](https://github.com/user-attachments/assets/d1a77b6f-8635-4b9a-ab9b-3961d0c4a700)
+![Screenshot 2025-05-22 025356](https://github.com/user-attachments/assets/b85145f3-98f4-4bd6-8600-887d2912522f)
+![Screenshot 2025-05-22 025442](https://github.com/user-attachments/assets/d1a77b6f-8635-4b9a-ab9b-3961d0c4a700)
 
 As shown in the screenshot, only one event was returned, and it contains the registry path we're looking for, along with the suspicious username: **HKLM\SAM\SAM\Domains\Account\Users\Names\A1berto**.
