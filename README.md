@@ -33,7 +33,7 @@ As with the previous step, I navigated to the **Selected Fields** pane and selec
 ![Screenshot 2025-05-22 165538](https://github.com/user-attachments/assets/a55fa89d-6187-49b8-8a01-d93c5bf6ecd9)
 As shown in the screenshot, there was one command containing the suspicious username: **"C:\Windows\System32\Wbem\WMIC.exe" /node:WORKSTATION6 process call create "net user /add A1berto paw0rd1"** This is most likely the command used to add the backdoor user.
 
-### Question 6: What is the name of the infected host where suspicious PowerShell commands were executed?
+### Question 5: What is the name of the infected host where suspicious PowerShell commands were executed?
 The infected host can be identified using the information from the previous screenshot, which shows the **Hostname:James.browne**.
 
-### Question 7: Is PowerShell logging enabled on this device? If so, how many events were recorded related to the malicious PowerShell execution?
+### Question 6: Is PowerShell logging enabled on this device? If so, how many events were recorded related to the malicious PowerShell execution?
