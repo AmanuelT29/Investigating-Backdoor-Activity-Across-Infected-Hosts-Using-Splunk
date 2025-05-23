@@ -37,3 +37,7 @@ ___
 The infected host can be identified using the information from the previous screenshot, which shows the **Hostname:James.browne**.
 ___
 ### Question 6: Is PowerShell logging enabled on this device? If so, how many events were recorded related to the malicious PowerShell execution?
+To find the answer, I relied on Event IDs. When PowerShell logging is enabled, Windows logs all PowerShell commands using Event ID 4103. By searching for events with this ID (**index="main" EventID="4103"**), we can determine whether PowerShell logging is enabled and how many related events were recorded.
+![Screenshot 2025-05-22 191231](https://github.com/user-attachments/assets/fff6137b-1077-4bd2-ba15-e47723ea554c)
+As shown in the screenshot, **79** instances of malicious PowerShell activity were detected.
+
