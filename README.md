@@ -40,4 +40,9 @@ ___
 To find the answer, I relied on Event IDs. When PowerShell logging is enabled, Windows logs all PowerShell commands using Event ID 4103. By searching for events with this ID (**index="main" EventID="4103"**), we can determine whether PowerShell logging is enabled and how many related events were recorded.
 ![Screenshot 2025-05-22 191231](https://github.com/user-attachments/assets/fff6137b-1077-4bd2-ba15-e47723ea554c)
 As shown in the screenshot, **79** instances of malicious PowerShell activity were detected.
+___
+
+## Conclusion 
+
+This investigation effectively demonstrates how Splunk can be leveraged to detect and analyze malicious activities across multiple hosts. By examining Windows event logs, the analysis identified the creation of a backdoor user account (**A1berto**), registry modifications, and the execution of suspicious PowerShell commands on the host **James.browne**. Notably, PowerShell logging was enabled, capturing 79 events related to the malicious activity. The adversary's attempt to impersonate the legitimate user **Alberto** underscores the importance of vigilant monitoring and analysis. Utilizing Splunk's capabilities allowed for a comprehensive understanding of the attack vector and reinforced the critical role of proactive log analysis in cybersecurity.
 
