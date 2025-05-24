@@ -4,6 +4,12 @@
 
 # Investigating Backdoor Activity Across Suspected Hosts Using Splunk
 
+## Platform and Tools Used
+- TryHackMe
+- Splunk
+- Virtual Machine
+
+
 ## Scenario Details
 A SOC Analyst has observed some anomalous behaviours in the logs of a few windows machines. It looks like the adversary has access to some of these machines and successfully created some backdoor. My task as a SOC Analyst is to examine the logs and identify the anomalies. All relevant logs are in the **index="main"**.
 
