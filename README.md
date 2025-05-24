@@ -1,3 +1,9 @@
+<p align="center">
+<img src="https://logos-world.net/wp-content/uploads/2022/11/Splunk-Emblem.png" alt="Splunk Logo" width="120"/>
+
+
+
+
 # Investigating Backdoor Activity Across Suspected Hosts Using Splunk
 
 ## Scenario Details
