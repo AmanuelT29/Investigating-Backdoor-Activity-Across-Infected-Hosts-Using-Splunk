@@ -22,6 +22,7 @@ To find the answer, I first checked the "Interesting Fields" pane, where I notic
 
 ![Screenshot 2025-05-22 013046](https://github.com/user-attachments/assets/6db7cba7-2df6-4f6f-99b3-a3890e037118)![Screenshot 2025-05-22 013239](https://github.com/user-attachments/assets/ddad888c-82f3-4a23-a76d-1dded90ff70d)
 
+
 As shown in the screenshot, only one event was returned, indicating that the account named **James** created the backdoor. It also reveals the name of the new account created: **A1berto**. It's important to note the spelling—the letter "L" is replaced with the number "1", likely as an attempt to mimic the name of a legitimate user and avoid detection.
 ___
 #### Question 2: Is there an updated registry key? If so, what is the full path of that registry key? 
@@ -34,7 +35,7 @@ As shown in the screenshot, only one event was returned, and it contains the reg
 ___
 ### Question 3: According to the logs, is there a legitimate user the adversary was trying to impersonate?
 To find the answer, I went to the **Selected Fields** pane and selected **User** to view all the users listed in the system.
-![Screenshot 2025-05-22 155208](https://github.com/user-attachments/assets/fcdc3f77-51bf-49b4-8a62-b6f5c48e09fe)
+ <img src="https://github.com/user-attachments/assets/fcdc3f77-51bf-49b4-8a62-b6f5c48e09fe" alt="Screenshot" width="800"/>
 
 As shown in the screenshot, there were four users listed in the logs. One user stood out: **Cybertees\Alberto**. This suggests that the adversary, using the username "A1berto", was attempting to impersonate the legitimate user **Alberto**.
 ___
